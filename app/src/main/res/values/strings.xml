@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Workout App</string>
+    <string name="startbtn">Start!</string>
+    <string name="start_image">Start Image</string>
+    <string name="ready">GET READY FOR</string>
+    <string name="name">EXERCISE NAME</string>
+    <string name="upcoming_exercise">UPCOMING EXERCISE</string>
+    <string name="next">Next</string>
+    <string name="end">END</string>
+    <string name="cong">Congratulations!</string>
+    <string name="done">You have done the workout!</string>
+    <string name="finish">FINISH</string>
+</resources>
