@@ -1,18 +1,19 @@
 package com.example.workoutapp
 
+import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutapp.databinding.ActivityExerciseBinding
+import com.example.workoutapp.databinding.LeaveConfirmBinding
 import java.util.*
-import kotlin.collections.ArrayList
 
 class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
@@ -42,7 +43,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         exerciseList = Constants.getExercises()
 
         binding?.toolbar?.setNavigationOnClickListener{
-            onBackPressed()
+            customDialogForBackButton()
         }
         tts= TextToSpeech(this, this)
         resting()
@@ -148,22 +149,37 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             if(result==TextToSpeech.LANG_MISSING_DATA || result==TextToSpeech.LANG_NOT_SUPPORTED){
                 Toast.makeText(this, "Language not supported", Toast.LENGTH_SHORT).show()
             }
-        }else{
+        } else {
             Toast.makeText(this, "Initialization Failed", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun speakOut(text: String){
+    private fun speakOut(text: String) {
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
+    }
+
+    private fun customDialogForBackButton() {
+        val customDialog = Dialog(this)
+        val dialogBinding = LeaveConfirmBinding.inflate(layoutInflater)
+        customDialog.setContentView(dialogBinding.root)
+        customDialog.setCanceledOnTouchOutside(false)
+        dialogBinding.yes.setOnClickListener {
+            this@ExerciseActivity.finish()
+            customDialog.dismiss()
+        }
+        dialogBinding.no.setOnClickListener {
+            customDialog.dismiss()
+        }
+        customDialog.show()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        if(restTimer != null){
+        if (restTimer != null) {
             restTimer?.cancel()
             restProgress = 0
         }
-        if(tts!=null){
+        if (tts != null) {
             tts?.stop()
             tts?.shutdown()
         }
