@@ -10,4 +10,5 @@
     <string name="cong">Congratulations!</string>
     <string name="done">You have done the workout!</string>
     <string name="finish">FINISH</string>
+    <string name="image">image</string>
 </resources>

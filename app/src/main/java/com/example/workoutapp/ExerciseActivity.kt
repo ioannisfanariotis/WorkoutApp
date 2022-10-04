@@ -11,7 +11,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutapp.databinding.ActivityExerciseBinding
-import com.example.workoutapp.databinding.ActivityMainBinding
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -24,7 +23,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var restTimer2: CountDownTimer? = null
     private var restProgress2 = 0
     private var exerciseTimeDuration: Long = 1
-    private var exerciseList: ArrayList<Exercise>? = null
+    private var exerciseList: ArrayList<Exercises>? = null
     private var currentExercise = -1
     private var tts: TextToSpeech? = null
     private var player: MediaPlayer?= null

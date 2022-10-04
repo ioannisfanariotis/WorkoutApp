@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workoutapp.databinding.ExerciseNumberBinding
 
-class AdaptorNumber(val items: ArrayList<Exercise>): RecyclerView.Adapter<AdaptorNumber.ViewHolder>() {
+class AdapterNumber(val items: ArrayList<Exercises>): RecyclerView.Adapter<AdapterNumber.ViewHolder>() {
 
     class ViewHolder(binding: ExerciseNumberBinding): RecyclerView.ViewHolder(binding.root){
         val number = binding.iconNumber
@@ -16,7 +16,7 @@ class AdaptorNumber(val items: ArrayList<Exercise>): RecyclerView.Adapter<Adapto
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val model: Exercise = items[position]
+        val model: Exercises = items[position]
         holder.number.text = model.getId().toString()
     }
 

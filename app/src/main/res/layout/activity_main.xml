@@ -33,8 +33,7 @@
             android:text="@string/startbtn"
             android:textSize="22sp"
             android:textColor="@color/dark"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold"/>
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
