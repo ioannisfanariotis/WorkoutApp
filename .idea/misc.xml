@@ -13,11 +13,17 @@
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/drawable/nymber_background.xml" value="0.2015" />
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/drawable/ripple_background.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/drawable/selected_number_background.xml" value="0.2015" />
+        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/drawable/tab_background.xml" value="0.2015" />
+        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/drawable/tab_color_selector.xml" value="0.2015" />
+        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/drawable/tab_selector.xml" value="0.2015" />
+        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/activity_bmi.xml" value="0.22" />
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/activity_excersice.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/activity_exercise.xml" value="0.22" />
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/activity_finish.xml" value="0.19610507246376813" />
-        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/activity_main.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/activity_history.xml" value="0.19610507246376813" />
+        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/exercise_number.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/leave_confirm.xml" value="0.19610507246376813" />
         <entry key="..\:/Users/John/AndroidStudioProjects/WorkoutApp/app/src/main/res/layout/recycler_view_item.xml" value="0.19610507246376813" />
       </map>
     </option>

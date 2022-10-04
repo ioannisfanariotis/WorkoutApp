@@ -1,19 +1,19 @@
 package com.example.workoutapp
 
+import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutapp.databinding.ActivityExerciseBinding
-import com.example.workoutapp.databinding.ActivityMainBinding
+import com.example.workoutapp.databinding.LeaveConfirmBinding
 import java.util.*
-import kotlin.collections.ArrayList
 
 class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
@@ -32,37 +32,57 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityExerciseBinding.inflate(layoutInflater)
+        binding = ActivityExerciseBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
         setSupportActionBar(binding?.toolbar)
-        if(supportActionBar != null){
+        if (supportActionBar != null) {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        binding?.toolbar?.setNavigationOnClickListener {
+            backButtonDialog()
         }
 
         exerciseList = Constants.getExercises()
 
-        binding?.toolbar?.setNavigationOnClickListener{
-            onBackPressed()
-        }
-        tts= TextToSpeech(this, this)
+        tts = TextToSpeech(this, this)
         resting()
         setUpNumberRecyclerView()
     }
 
-    private fun setUpNumberRecyclerView(){
-        binding?.exerciseNumber?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        adapter= AdapterNumber(exerciseList!!)
+    override fun onBackPressed() {
+        backButtonDialog()
+    }
+
+    private fun setUpNumberRecyclerView() {
+        binding?.exerciseNumber?.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        adapter = AdapterNumber(exerciseList!!)
         binding?.exerciseNumber?.adapter = adapter
     }
 
-    private fun resting(){
-        try{
+    private fun backButtonDialog() {
+        val customDialog = Dialog(this)
+        val dialogBinding = LeaveConfirmBinding.inflate(layoutInflater)
+        customDialog.setContentView(dialogBinding.root)
+        customDialog.setCanceledOnTouchOutside(false)
+        dialogBinding.yes.setOnClickListener {
+            this@ExerciseActivity.finish()
+            customDialog.dismiss()
+        }
+        dialogBinding.no.setOnClickListener {
+            customDialog.dismiss()
+        }
+        customDialog.show()
+    }
+
+    private fun resting() {
+        try {
             val sound = Uri.parse("android.resource://com.example.workoutapp/" + R.raw.press_start)
             player = MediaPlayer.create(applicationContext, sound)
             player?.isLooping = false
             player?.start()
-        }catch (e: Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
         binding?.firstLayout?.visibility = View.VISIBLE
