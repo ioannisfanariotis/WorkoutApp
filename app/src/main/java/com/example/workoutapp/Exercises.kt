@@ -1,6 +1,6 @@
 package com.example.workoutapp
 
-class Exercise(
+class Exercises(
     private var id: Int,
     private var name: String,
     private var image: Int,

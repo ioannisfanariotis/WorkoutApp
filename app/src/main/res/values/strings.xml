@@ -11,4 +11,25 @@
     <string name="done">You have done the workout!</string>
     <string name="finish">FINISH</string>
     <string name="image">image</string>
+    <string name="tik">✓</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="quitting">Are you sure you want to quit?</string>
+    <string name="exercise_completed">Completed Exercises</string>
+    <string name="no_data_available">No Data Available!</string>
+    <string name="calculate">calculate</string>
+    <string name="yourBMI">yourBMI</string>
+    <string name="result1">result1</string>
+    <string name="result2">result2</string>
+    <string name="result3">result3</string>
+    <string name="feet">Feet</string>
+    <string name="inch">Inch</string>
+    <string name="metric">METRIC</string>
+    <string name="us">US</string>
+    <string name="weight">Weight</string>
+    <string name="usWeight">usWeight</string>
+    <string name="height">Height</string>
+    <string name="bmi">BMI</string>
+    <string name="calculator">Calculator</string>
+    <string name="history">History</string>
 </resources>
