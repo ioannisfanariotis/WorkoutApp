@@ -13,8 +13,7 @@
         android:theme="@style/Theme.WorkoutApp"
         android:background="@color/white"
         app:titleTextColor="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
     
     <TextView
         android:id="@+id/getReady"
@@ -26,8 +25,7 @@
         android:textColor="@color/green"
         app:layout_constraintBottom_toTopOf="@+id/firstLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-    />
+        app:layout_constraintEnd_toEndOf="parent" />
     
     <FrameLayout
         android:id="@+id/firstLayout"
@@ -52,16 +50,14 @@
             android:indeterminate="false"
             android:max="10"
             android:progress="10"
-            android:rotation="-90"
-            />
+            android:rotation="-90" />
 
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/accent_background"
-            android:gravity="center"
-            >
+            android:gravity="center">
             <TextView
                 android:id="@+id/firstTimer"
                 android:layout_width="wrap_content"
@@ -70,7 +66,6 @@
                 android:textSize="25sp"
                 android:textColor="#FFFFFF"
                 tools:text="10"/>
-
         </LinearLayout>
     </FrameLayout>
 
@@ -88,8 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstLayout"
-        app:layout_constraintBottom_toTopOf="@id/next"
-        />
+        app:layout_constraintBottom_toTopOf="@id/next"/>
 
     <TextView
         android:id="@+id/next"
@@ -104,8 +98,7 @@
         tools:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upcoming"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/upcoming"/>
 
     <ImageView
         android:id="@+id/exerciseImage"
@@ -115,7 +108,8 @@
         android:src="@drawable/ic_jumping_jacks"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/exerciseName"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:contentDescription="@string/image" />
 
     <TextView
         android:id="@+id/exerciseName"
@@ -130,7 +124,6 @@
         app:layout_constraintTop_toBottomOf="@+id/exerciseImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
 
     <FrameLayout
         android:id="@+id/secondLayout"
@@ -155,16 +148,14 @@
             android:indeterminate="false"
             android:max="30"
             android:progress="300"
-            android:rotation="-90"
-            />
+            android:rotation="-90" />
 
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/accent_background"
-            android:gravity="center"
-            >
+            android:gravity="center">
             <TextView
                 android:id="@+id/secondTimer"
                 android:layout_width="wrap_content"

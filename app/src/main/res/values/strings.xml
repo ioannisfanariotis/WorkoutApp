@@ -10,25 +10,5 @@
     <string name="cong">Congratulations!</string>
     <string name="done">You have done the workout!</string>
     <string name="finish">FINISH</string>
-    <string name="sure">Are you sure?</string>
-    <string name="yes">YES</string>
-    <string name="no">NO</string>
-    <string name="bmi">BMI</string>
-    <string name="calc">Calculator</string>
-    <string name="his">History</string>
-    <string name="weight">WEIGHT (in kg)</string>
-    <string name="usWeight">WEIGHT (in lb)</string>
-    <string name="height">HEIGHT (in cm)</string>
-    <string name="feet">Feet</string>
-    <string name="inch">Inch</string>
-    <string name="calculate">CALCULATE</string>
-    <string name="yourBMI">YOUR BMI</string>
-    <string name="result1">result1</string>
-    <string name="result2">result2</string>
-    <string name="result3">result3</string>
-    <string name="metric">METRIC UNITS</string>
-    <string name="us">US UNITS</string>
-    <string name="quitting">This will stop the workout. You have come this far, are you sure you want to quit?</string>
-    <string name="exercise_completed">EXERCISE COMPLETED</string>
-    <string name="no_data_available">NO DATA AVAILABLE</string>
+    <string name="image">image</string>
 </resources>
