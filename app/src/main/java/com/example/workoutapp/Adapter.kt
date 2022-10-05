@@ -31,10 +31,7 @@ class Adapter(private val items: ArrayList<String>) : RecyclerView.Adapter<Adapt
 
         if (position % 2 == 0) {
             holder.layout.setBackgroundColor(
-                ContextCompat.getColor(
-                    holder.itemView.context,
-                    R.color.white
-                )
+                ContextCompat.getColor(holder.itemView.context, R.color.white)
             )
         } else {
             holder.layout.setBackgroundColor(

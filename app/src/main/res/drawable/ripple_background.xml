@@ -7,5 +7,5 @@
         </shape>
     </item>
 
-    <item android:drawable="@drawable/accent_border"/>
+    <item android:drawable="@drawable/selected_number_background" />
 </ripple>
