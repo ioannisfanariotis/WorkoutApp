@@ -5,6 +5,7 @@ in which exercise he/she is currently doing, how many of them has already done a
 If the user wishes to stop working out, an alert dialog will pop out just to make sure he/she wants to leave or the desicion was a missclick.
 The application contains a record (room database) where the user can get informed about all the times he/she exercised.
 Moreover, there is a body mass index (BMI) where the user can calculate the BMI with kg/cm or inch/feet.
+
 ![1](https://user-images.githubusercontent.com/109162046/194759625-a5d34a4f-9015-4a33-a76a-fd700a818b56.PNG)
 ![2](https://user-images.githubusercontent.com/109162046/194759627-feceef85-09a1-4c61-ae92-2125abf3dbf0.PNG)
 ![3](https://user-images.githubusercontent.com/109162046/194759630-bbdabe6a-fa96-4ff2-b1bf-b3fb4db980e1.PNG)
