@@ -1,10 +1,6 @@
-WorkoutApp gives the user the ability to exercise for 7 minutes using 12 different exercises for 30 seconds and have a 10-seconds-break between them.
-There is a Media Player that plays a sound every time an exercise is over and a TextToSpeech operator that tells you the name of every exercise once it is started.
-Ath the bottom of the screen, there is a Recycler View that shows 12 numbers that are corresponed to the 12 exercises, so the user can get informed about
-in which exercise he/she is currently doing, how many of them has already done and how many are left.
-If the user wishes to stop working out, an alert dialog will pop out just to make sure he/she wants to leave or the desicion was a missclick.
-The application contains a record (room database) where the user can get informed about all the times he/she exercised.
-Moreover, there is a body mass index (BMI) where the user can calculate the BMI with kg/cm or inch/feet.
+WorkoutApp gives the user the ability to exercise for 7 minutes using 12 different exercises for 30 seconds each one and have a 10-seconds-break in between.
+The application also contains a workout history and a body mass index (BMI) either kg/cm or inch/feet.
+Technologies that are used: COROUTINE, ROOM DATABASE.
 
 ![1](https://user-images.githubusercontent.com/109162046/194759625-a5d34a4f-9015-4a33-a76a-fd700a818b56.PNG)
 ![2](https://user-images.githubusercontent.com/109162046/194759627-feceef85-09a1-4c61-ae92-2125abf3dbf0.PNG)
