@@ -8,20 +8,29 @@
     android:orientation="vertical"
     tools:context=".FinishActivity">
 
-    <Button
-        android:id="@+id/finish"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:theme="@style/Theme.WorkoutApp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/black" />
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/design_default_color_primary"
-        android:text="@string/finish"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"
+        android:text="@string/end"
+        android:textColor="@color/green"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/done" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
         android:id="@+id/tic"
@@ -71,27 +80,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/congrats" />
 
-    <TextView
-        android:id="@+id/end"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingBottom="10dp"
-        android:text="@string/end"
-        android:textColor="@color/green"
-        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:background="@color/design_default_color_primary"
+        android:text="@string/finish"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/white"
-        android:theme="@style/Theme.WorkoutApp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/black" />
+        app:layout_constraintTop_toBottomOf="@+id/done" />
 </androidx.constraintlayout.widget.ConstraintLayout>

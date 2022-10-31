@@ -14,6 +14,17 @@
         android:background="@color/white"
         app:titleTextColor="@color/black"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/exerciseImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_jumping_jacks"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/exerciseName"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:contentDescription="@string/image" />
     
     <TextView
         android:id="@+id/getReady"
@@ -100,17 +111,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upcoming"/>
 
-    <ImageView
-        android:id="@+id/exerciseImage"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_jumping_jacks"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/exerciseName"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        android:contentDescription="@string/image" />
-
     <TextView
         android:id="@+id/exerciseName"
         android:layout_width="wrap_content"
@@ -179,5 +179,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
     </androidx.recyclerview.widget.RecyclerView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
