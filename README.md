@@ -1,6 +1,11 @@
 WorkoutApp gives the user the ability to exercise for 7 minutes using 12 different exercises for 30 seconds each one and have a 10-seconds-break in between.
+
 The application also contains a workout history and a body mass index (BMI) either kg/cm or inch/feet.
-Technologies that are used: VIEW BINDING, COROUTINE, ROOM DATABASE.
+
+Libraries included for this project
+- View Binding
+- Coroutines
+- Room Database
 
 ![1](https://user-images.githubusercontent.com/109162046/194759625-a5d34a4f-9015-4a33-a76a-fd700a818b56.PNG)
 ![2](https://user-images.githubusercontent.com/109162046/194759627-feceef85-09a1-4c61-ae92-2125abf3dbf0.PNG)
