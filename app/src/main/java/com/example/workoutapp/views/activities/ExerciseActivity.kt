@@ -1,5 +1,6 @@
-package com.example.workoutapp
+package com.example.workoutapp.views.activities
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
@@ -11,8 +12,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.workoutapp.R
 import com.example.workoutapp.databinding.ActivityExerciseBinding
 import com.example.workoutapp.databinding.LeaveConfirmBinding
+import com.example.workoutapp.utils.Constants
+import com.example.workoutapp.utils.Exercises
+import com.example.workoutapp.views.adapters.AdapterNumber
 import java.util.*
 
 class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
@@ -88,6 +93,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 binding?.firstProgressBar?.progress = 10 - restProgress
                 binding?.firstTimer?.text = (10 - restProgress).toString()
             }
+            @SuppressLint("NotifyDataSetChanged")
             override fun onFinish() {
                 Toast.makeText(this@ExerciseActivity, "Start of Exercise", Toast.LENGTH_SHORT).show()
                 currentExercise++
@@ -126,6 +132,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 binding?.secondProgressBar?.progress = 30 - restProgress2
                 binding?.secondTimer?.text = (30 - restProgress2).toString()
             }
+            @SuppressLint("NotifyDataSetChanged")
             override fun onFinish() {
                 Toast.makeText(this@ExerciseActivity, "End of Exercise, now rest", Toast.LENGTH_SHORT).show()
                 if(currentExercise < exerciseList?.size!! - 1){
@@ -173,6 +180,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         customDialog.show()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         customDialogForBackButton()
         //super.onBackPressed()

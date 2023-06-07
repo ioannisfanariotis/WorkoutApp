@@ -1,9 +1,12 @@
-package com.example.workoutapp
+package com.example.workoutapp.views.activities
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.workoutapp.database.HistoryDao
+import com.example.workoutapp.models.History
+import com.example.workoutapp.App
 import com.example.workoutapp.databinding.ActivityFinishBinding
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -30,7 +33,7 @@ class FinishActivity : AppCompatActivity() {
             finish()
         }
 
-        val historyDao = (application as WorkoutApp).db.historyDao()
+        val historyDao = (application as App).db.historyDao()
         addToDatabase(historyDao)
     }
 
@@ -44,7 +47,7 @@ class FinishActivity : AppCompatActivity() {
         Log.e("Formatted Date: ", "" + date)
 
         lifecycleScope.launch {
-            historyDao.insert((HistoryEntity(date)))
+            historyDao.insert((History(date)))
             Log.e("Date: ", "Added...")
         }
     }

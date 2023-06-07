@@ -1,11 +1,14 @@
-package com.example.workoutapp
+package com.example.workoutapp.views.activities
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.workoutapp.database.HistoryDao
+import com.example.workoutapp.App
 import com.example.workoutapp.databinding.ActivityHistoryBinding
+import com.example.workoutapp.views.adapters.Adapter
 import kotlinx.coroutines.launch
 
 class HistoryActivity : AppCompatActivity() {
@@ -26,7 +29,7 @@ class HistoryActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        val historyDao = (application as WorkoutApp).db.historyDao()
+        val historyDao = (application as App).db.historyDao()
         getDates(historyDao)
     }
 

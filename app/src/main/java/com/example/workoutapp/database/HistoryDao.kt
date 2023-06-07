@@ -1,15 +1,16 @@
-package com.example.workoutapp
+package com.example.workoutapp.database
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.workoutapp.models.History
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface HistoryDao {
     @Insert
-    suspend fun insert(historyEntity: HistoryEntity)
+    suspend fun insert(history: History)
 
     @Query("SELECT * FROM `history-table`")
-    fun fetchAllDates(): Flow<List<HistoryEntity>>
+    fun fetchAllDates(): Flow<List<History>>
 }

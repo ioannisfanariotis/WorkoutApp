@@ -1,4 +1,4 @@
-package com.example.workoutapp
+package com.example.workoutapp.utils
 
 class Exercises(
     private var id: Int,

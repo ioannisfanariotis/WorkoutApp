@@ -1,4 +1,6 @@
-package com.example.workoutapp
+package com.example.workoutapp.utils
+
+import com.example.workoutapp.R
 
 object Constants {
 
@@ -22,11 +24,9 @@ object Constants {
         exerciseList.add(e8)
         val e9 = Exercises(9, "Squats", R.drawable.ic_squat, false, false)
         exerciseList.add(e9)
-        val e10 =
-            Exercises(10, "Step Up Onto Chair", R.drawable.ic_step_up_onto_chair, false, false)
+        val e10 = Exercises(10, "Step Up Onto Chair", R.drawable.ic_step_up_onto_chair, false, false)
         exerciseList.add(e10)
-        val e11 =
-            Exercises(11, "Triceps Dip on Chair", R.drawable.ic_triceps_dip_on_chair, false, false)
+        val e11 = Exercises(11, "Triceps Dip on Chair", R.drawable.ic_triceps_dip_on_chair, false, false)
         exerciseList.add(e11)
         val e12 = Exercises(12, "Wall Sit", R.drawable.ic_wall_sit, false, false)
         exerciseList.add(e12)

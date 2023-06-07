@@ -1,13 +1,15 @@
-package com.example.workoutapp
+package com.example.workoutapp.views.adapters
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.workoutapp.utils.Exercises
+import com.example.workoutapp.R
 import com.example.workoutapp.databinding.RecyclerViewItemBinding
 
-class AdapterNumber(val items: ArrayList<Exercises>): RecyclerView.Adapter<AdapterNumber.ViewHolder>() {
+class AdapterNumber(private val items: ArrayList<Exercises>): RecyclerView.Adapter<AdapterNumber.ViewHolder>() {
 
     class ViewHolder(binding: RecyclerViewItemBinding) : RecyclerView.ViewHolder(binding.root) {
         val number = binding.iconNumber

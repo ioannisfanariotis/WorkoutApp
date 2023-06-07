@@ -1,9 +1,11 @@
-package com.example.workoutapp
+package com.example.workoutapp.views.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.workoutapp.R
 import com.example.workoutapp.databinding.RecyclerViewBinding
 
 class Adapter(private val items: ArrayList<String>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
@@ -15,32 +17,19 @@ class Adapter(private val items: ArrayList<String>) : RecyclerView.Adapter<Adapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
-            RecyclerViewBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
-            )
-        )
+        return ViewHolder(RecyclerViewBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val date: String = items.get(position)
+        val date: String = items[position]
         holder.pos.text = (position + 1).toString()
         holder.item.text = date
 
-        if (position % 2 == 0) {
-            holder.layout.setBackgroundColor(
-                ContextCompat.getColor(holder.itemView.context, R.color.white)
-            )
-        } else {
-            holder.layout.setBackgroundColor(
-                ContextCompat.getColor(
-                    holder.itemView.context,
-                    R.color.gray
-                )
-            )
-        }
+        if (position % 2 == 0)
+            holder.layout.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.white))
+        else
+            holder.layout.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.gray))
     }
 
     override fun getItemCount(): Int {

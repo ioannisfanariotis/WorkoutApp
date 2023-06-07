@@ -1,9 +1,10 @@
-package com.example.workoutapp
+package com.example.workoutapp.views.activities
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.workoutapp.R
 import com.example.workoutapp.databinding.ActivityBmiBinding
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -32,14 +33,13 @@ class BMIActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        MetricVisibility()
+        metricVisibility()
 
         binding?.units?.setOnCheckedChangeListener { _, checkedId ->
-            if (checkedId == R.id.metricUnit) {
-                MetricVisibility()
-            } else {
-                UsVisibility()
-            }
+            if (checkedId == R.id.metricUnit)
+                metricVisibility()
+            else
+                usVisibility()
         }
 
         binding?.calculate?.setOnClickListener {
@@ -61,7 +61,7 @@ class BMIActivity : AppCompatActivity() {
         }
     }
 
-    private fun MetricVisibility() {
+    private fun metricVisibility() {
         currentView = METRIC_VIEW
         binding?.MetricUnitWeight?.visibility = View.VISIBLE
         binding?.MetricUnitHeight?.visibility = View.VISIBLE
@@ -72,7 +72,7 @@ class BMIActivity : AppCompatActivity() {
         binding?.allResults?.visibility = View.GONE
     }
 
-    private fun UsVisibility() {
+    private fun usVisibility() {
         currentView = US_VIEW
         binding?.MetricUnitWeight?.visibility = View.INVISIBLE
         binding?.MetricUnitHeight?.visibility = View.INVISIBLE
